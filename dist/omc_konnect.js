@@ -5300,4 +5300,4 @@ define("oasis/xhr",
     }
 
     __exports__.xhr = xhr;
-  });self.Oasis = requireModule('oasis'); self.oasis = new self.Oasis(); self.oasis.autoInitializeSandbox();
+  });self.OmcKonnect = requireModule('oasis'); self.konnect = new self.OmcKonnect(); self.konnect.autoInitializeSandbox();

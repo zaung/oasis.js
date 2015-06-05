@@ -13,6 +13,11 @@ module.exports = {
     dest: 'dist/oasis.amd.js'
   },
 
+  oracle_amd: {
+    src: ['tmp/amd/**/*.js'],
+    dest: 'dist/omc_konnect.amd.js'
+  },
+
   test: {
     src: vendorSources.concat([
       'dist/oasis.amd.js',
@@ -27,7 +32,18 @@ module.exports = {
     ]),
     dest: 'dist/oasis.js',
     options: {
-      footer: "self.Oasis = requireModule('oasis'); self.oasis = new self.Oasis(); self.oasis.autoInitializeSandbox();"
+      footer: "self.Oasis = requireModule('oasis'); self.oasis = new self.Oasis(); self.oasis.autoInitializeSandbox();"       
+    }
+  },
+
+  oracle_browser: {
+    src: vendorSources.concat([
+      'dist/omc_konnect.amd.js'
+    ]),
+    dest: 'dist/omc_konnect.js',
+    options: {
+      footer: "self.OmcKonnect = requireModule('oasis'); self.konnect = new self.OmcKonnect(); self.konnect.autoInitializeSandbox();"       
     }
   }
+
 };
