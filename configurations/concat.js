@@ -42,7 +42,7 @@ module.exports = {
     ]),
     dest: 'dist/omc_konnect.js',
     options: {
-      footer: "self.OmcKonnect = requireModule('oasis'); self.konnect = new self.OmcKonnect(); self.konnect.autoInitializeSandbox();"       
+      footer: "self.OmcKonnect = self.Oasis = requireModule('oasis'); self.oasis = self.omck = new self.OmcKonnect(); self.omck.autoInitializeSandbox();"
     }
   }
 
